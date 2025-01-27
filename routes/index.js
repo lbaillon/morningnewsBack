@@ -17,4 +17,8 @@ router.get('/articles', (req, res) => {
     });
 });
 
+router.get('/debug', (req, res) => {
+  res.json({ news : NEWS_API_KEY, connection : process.env.CONNECTION_STRING})
+} )
+
 module.exports = router;
